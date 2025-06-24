@@ -32,8 +32,8 @@ README.md                   # Documentação
 1. Clone o repositório:
 
 ```
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio
+git clone https://github.com/Hubbleq/finance-api.git
+cd finance-api
 ```
 
 2. Crie e ative um ambiente virtual:
