@@ -8,7 +8,7 @@ Este projeto tem como objetivo o gerenciamento de contas, categorias e transaç�
 
 - Python 3.11+
 - FastAPI
-- SQLModel + SQLite (ou PostgreSQL)
+- SQLModel + SQLite
 - Uvicorn (servidor ASGI)
 
 ## Estrutura do Projeto
@@ -96,4 +96,4 @@ Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE par
 
 Bruno Cavalcante  
 Email: cavalcantebruno76@gmail.com  
-LinkedIn: https://www.linkedin.com/
+LinkedIn: https://www.linkedin.com/in/bruno-xz/
