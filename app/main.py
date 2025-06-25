@@ -4,13 +4,22 @@ from app.database import create_db_and_tables
 from app.routers import accounts, transactions, categories, reports
 from app.routers import reports
 
+from fastapi import FastAPI
+from contextlib import asynccontextmanager
+from app.database import create_db_and_tables
 
-app = FastAPI(title="Finance API")
-
-
-@app.on_event("startup")
-def on_startup():
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Código executado antes da aplicação "subir" (startup)
     create_db_and_tables()
+    yield
+    # Código executado no shutdown, se necessário
+
+app = FastAPI(title="Finance API", lifespan=lifespan)
+
+# inclui suas rotas normalmente
+
+
 
 app.include_router(accounts.router)
 app.include_router(transactions.router)

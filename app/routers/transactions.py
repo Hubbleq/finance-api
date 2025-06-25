@@ -16,7 +16,7 @@ router = APIRouter()
 def read_transactions(
     session: Session = Depends(get_session),
     account_id: Optional[int] = Query(None),
-    type: Optional[str] = Query(None, regex="^(income|expense)$"),
+    type: Optional[str] = Query(None, pattern="^(income|expense)$"),
     date_from: Optional[datetime] = Query(None),
     date_to: Optional[datetime] = Query(None),
 ):
