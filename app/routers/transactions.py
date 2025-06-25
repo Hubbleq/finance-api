@@ -5,7 +5,7 @@ from datetime import datetime
 from app.models import Transaction  # Add this import for Transaction model
 from app.database import get_session
 
-router = APIRouter()
+router = APIRouter(prefix="/transactions")
 
 @router.get(
     "/",
