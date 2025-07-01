@@ -2,7 +2,7 @@ from typing import Optional, List
 from fastapi import APIRouter, Query, Depends
 from sqlmodel import Session, select
 from datetime import datetime
-from app.models import Transaction  # Add this import for Transaction model
+from app.models import Transaction
 from app.database import get_session
 
 router = APIRouter(prefix="/transactions")

@@ -1,9 +1,8 @@
 from fastapi import FastAPI
-from app.routers import accounts, transactions, categories
+from app.routers import accounts, transactions, categories, auth
 from app.database import create_db_and_tables
 from app.routers import accounts, transactions, categories, reports
 from app.routers import reports
-
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
 from app.database import create_db_and_tables
@@ -24,6 +23,7 @@ app = FastAPI(title="Finance API", lifespan=lifespan)
 app.include_router(accounts.router)
 app.include_router(transactions.router)
 app.include_router(categories.router)
+app.include_router(auth.router)
 app.include_router(reports.router)
 app.include_router(reports.router)
 
