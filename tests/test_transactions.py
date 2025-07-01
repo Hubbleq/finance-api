@@ -14,6 +14,6 @@ def test_db():
 def client():
     return TestClient(app)
 
-def test_get_transactions(client):
+def test_get_transactions(client, test_db):
     response = client.get("/transactions/")
     assert response.status_code == 200
