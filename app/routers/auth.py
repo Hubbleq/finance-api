@@ -11,9 +11,7 @@ import os
 SECRET_KEY = os.environ.get("SECRET_KEY", "unsafe_default_secret")
 ALGORITHM = "HS256"
 
-# Função de autenticação de exemplo
 def authenticate_user(username: str, password: str):
-    # Substitua pela lógica real de autenticação
     if username == "admin" and password == "senha":
         return {"username": username}
     return None
