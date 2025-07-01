@@ -6,7 +6,9 @@ from jose import jwt
 router = APIRouter(prefix="/auth", tags=["Auth"])
 
 # Defina sua chave secreta e algoritmo
-SECRET_KEY = "sua_chave_secreta"
+import os
+
+SECRET_KEY = os.environ.get("SECRET_KEY", "unsafe_default_secret")
 ALGORITHM = "HS256"
 
 # Função de autenticação de exemplo

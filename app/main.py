@@ -1,4 +1,3 @@
-from fastapi import FastAPI
 from app.routers import accounts, transactions, categories, auth
 from app.database import create_db_and_tables
 from app.routers import accounts, transactions, categories, reports
@@ -24,7 +23,6 @@ app.include_router(accounts.router)
 app.include_router(transactions.router)
 app.include_router(categories.router)
 app.include_router(auth.router)
-app.include_router(reports.router)
 app.include_router(reports.router)
 
 @app.get("/")
